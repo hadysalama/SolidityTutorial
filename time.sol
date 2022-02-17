@@ -8,21 +8,21 @@ contract MyContract {
 
     uint256 openingTime = 1645079900;
 
-    modifier onlyWhileOpen{
+    modifier onlyWhileOpen() {
         require(block.timestamp >= openingTime);
         _;
     }
 
-    struct Person{
+    struct Person {
         uint256 _id;
         string _firstName;
         string _lastName;
     }
 
-    function addPerson(
-        string memory _firstName, 
-        string memory _lastName) 
-        public onlyWhileOpen {
+    function addPerson(string memory _firstName, string memory _lastName)
+        public
+        onlyWhileOpen
+    {
         incrementCount();
         people[peopleCount] = Person(peopleCount, _firstName, _lastName);
     }
