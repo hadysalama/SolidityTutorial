@@ -5,7 +5,7 @@ pragma solidity ^0.8.12;
 contract MyContract {
     string public value = "Hello World!"; //Can also be string public constant.
 
-    constructor() {
+    constructor() { //Initializes the contract. Runs first time only to set state variables.
         value = "Hello World!";
     }
 
