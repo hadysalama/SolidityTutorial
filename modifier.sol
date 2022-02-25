@@ -19,7 +19,7 @@ contract MyContract {
         string _lastName;
     }
 
-    constructor() public {
+    constructor(){
         owner = msg.sender;
     }
 
